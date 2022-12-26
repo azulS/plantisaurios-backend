@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a56c68e-2878-4db5-8c11-a81724fb75a3" name="Changes" comment="xb c">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/azulean/Persistente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/azulean/PositionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/azulean/RepoPositionJPA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/azulean/RepoTreeJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/azulean/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/Position.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/RepoPositionJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/RepoPositionJPA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/TreesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/TreeControllerComplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/TreeControllerComplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/TreeControllerComplement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671988799432</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="xb c">
+      <created>1672080599582</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672080599582</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

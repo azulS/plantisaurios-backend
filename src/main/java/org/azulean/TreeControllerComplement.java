@@ -24,14 +24,21 @@ public class TreeControllerComplement {
         return ResponseEntity.ok(mockTrees);
     }
 
-
-
-    public List<Tree> getMockTrees() {
+    @GetMapping("/mocktrees")
+    public @ResponseBody ResponseEntity<List<Tree>> getMockTrees() throws Exception{
         List<Tree> trees = new ArrayList<>();
         trees.add(new Tree("morera", new Position(1, 1)));
         trees.add(new Tree("naranjo", new Position(2, 2)));
-        return trees;
+
+        return ResponseEntity.ok(trees);
     }
+
+//    public List<Tree> getMockTrees() {
+//        List<Tree> trees = new ArrayList<>();
+//        trees.add(new Tree("morera", new Position(1, 1)));
+//        trees.add(new Tree("naranjo", new Position(2, 2)));
+//        return trees;
+//    }
 
     @Transactional
     @PostMapping("/tress")
@@ -39,7 +46,7 @@ public class TreeControllerComplement {
             @RequestBody Tree newTree
     )throws Exception {
         Optional<Position> positionOptional =
-                Optional.ofNullable(repoPositionJPA.findByPosition(newTree.getPosition()));
+                Optional.ofNullable(repoPositionJPA.findByXAndY(newTree.getPosition().getX(), newTree.getPosition().getY()));
         try {
             if (!positionOptional.isPresent()) {
                 repoTreeJPA.save(newTree);
