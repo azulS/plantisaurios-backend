@@ -1,8 +1,19 @@
 package org.azulean;
 
-public class Tree {
+import lombok.Getter;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Getter
+@Setter
+@Entity
+public class Tree extends Persistente{
+    @Column
     private String produce;
+    @OneToOne
     private Position position;
 
     public Tree(String produce, Position position) {
@@ -10,11 +21,4 @@ public class Tree {
         this.position = position;
     }
 
-    public String getProduce() {
-        return produce;
-    }
-
-    public Position getPosition() {
-        return position;
-    }
 }

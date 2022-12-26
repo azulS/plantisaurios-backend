@@ -1,9 +1,19 @@
 package org.azulean;
 
-import java.util.Objects;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Position {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity
+@Getter
+@Setter
+public class Position extends Persistente{
+
+    @Column
     private final double x;
+    @Column
     private final double y;
 
     public Position(double x, double y) {
@@ -11,11 +21,5 @@ public class Position {
         this.y = y;
     }
 
-    public double getX() {
-        return x;
-    }
 
-    public double getY() {
-        return y;
-    }
 }
