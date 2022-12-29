@@ -1,5 +1,10 @@
-package org.azulean;
+package org.azulean.app.repository.ControllerComplement;
 
+import org.azulean.app.PositionException;
+import org.azulean.app.repository.RepoPositionJPA;
+import org.azulean.app.repository.RepoTreeJPA;
+import org.azulean.model.Position;
+import org.azulean.model.Tree;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-@RepositoryRestController
+@RestController
+
+// TODO: 12/29/2022 repositoryRestController no funciona...no sabemos porque
 public class TreeControllerComplement {
 
     @Autowired
@@ -18,13 +25,13 @@ public class TreeControllerComplement {
     @Autowired
     private RepoPositionJPA repoPositionJPA;
 
-    @GetMapping("/trees")
+    @GetMapping(path = "/trees")
     public @ResponseBody ResponseEntity<List<Tree>> getTrees() throws Exception{
         List<Tree> mockTrees = repoTreeJPA.findAll();
         return ResponseEntity.ok(mockTrees);
     }
 
-    @GetMapping("/mocktrees")
+    @GetMapping(path = "/mocktrees")
     public @ResponseBody ResponseEntity<List<Tree>> getMockTrees() throws Exception{
         List<Tree> trees = new ArrayList<>();
         trees.add(new Tree("morera", new Position(1, 1)));

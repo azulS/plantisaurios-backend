@@ -1,4 +1,6 @@
-package org.azulean;
+package org.azulean.app;
+
+import org.azulean.model.Position;
 
 public class PositionException extends Exception {
 

@@ -1,4 +1,4 @@
-package org.azulean;
+package org.azulean.model;
 
 import lombok.Getter;
 

@@ -1,8 +1,9 @@
-package org.azulean;
+package org.azulean.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.azulean.model.Persistente;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +12,7 @@ import javax.persistence.Entity;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Position extends Persistente{
+public class Position extends Persistente {
     @Column
     private double x;
     @Column

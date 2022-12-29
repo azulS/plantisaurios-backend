@@ -1,5 +1,6 @@
-package org.azulean;
+package org.azulean.app.repository;
 
+import org.azulean.model.Tree;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

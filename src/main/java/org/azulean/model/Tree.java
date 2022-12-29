@@ -1,4 +1,4 @@
-package org.azulean;
+package org.azulean.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,7 +12,7 @@ import javax.persistence.OneToOne;
 @Setter
 @Entity
 @NoArgsConstructor
-public class Tree extends Persistente{
+public class Tree extends Persistente {
     @Column
     private String produce;
     @OneToOne
