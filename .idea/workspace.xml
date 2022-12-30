@@ -6,17 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2a56c68e-2878-4db5-8c11-a81724fb75a3" name="Changes" comment="xb c">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/TreeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/Persistente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/model/Persistente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/PositionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/PositionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/RepoPositionJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/RepoPositionJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/RepoTreeJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/RepoTreeJPA.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/model/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/TreeControllerComplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/ControllerComplement/TreeControllerComplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/app/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/ControllerComplement/TreeControllerComplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/ControllerComplement/TreeControllerComplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/RepoPositionJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/RepoPositionJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/RepoTreeJPA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/app/repository/RepoTreeJPA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/azulean/model/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/azulean/model/Tree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672086562383</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="xb c">
+      <created>1672328661203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672328661203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
-@RestController
+@RepositoryRestController
 
-// TODO: 12/29/2022 repositoryRestController no funciona...no sabemos porque
 public class TreeControllerComplement {
 
     @Autowired
@@ -25,13 +25,13 @@ public class TreeControllerComplement {
     @Autowired
     private RepoPositionJPA repoPositionJPA;
 
-    @GetMapping(path = "/trees")
+    @GetMapping(path = "/tree/all")
     public @ResponseBody ResponseEntity<List<Tree>> getTrees() throws Exception{
         List<Tree> mockTrees = repoTreeJPA.findAll();
         return ResponseEntity.ok(mockTrees);
     }
 
-    @GetMapping(path = "/mocktrees")
+    @GetMapping(path = "/tree/mocktrees")
     public @ResponseBody ResponseEntity<List<Tree>> getMockTrees() throws Exception{
         List<Tree> trees = new ArrayList<>();
         trees.add(new Tree("morera", new Position(1, 1)));
@@ -39,35 +39,39 @@ public class TreeControllerComplement {
 
         return ResponseEntity.ok(trees);
     }
-
-//    public List<Tree> getMockTrees() {
-//        List<Tree> trees = new ArrayList<>();
-//        trees.add(new Tree("morera", new Position(1, 1)));
-//        trees.add(new Tree("naranjo", new Position(2, 2)));
-//        return trees;
-//    }
-
-    @Transactional
-    @PostMapping("/tress")
-    public @ResponseBody ResponseEntity<Object> addTree(
-            @RequestBody Tree newTree
+    @PostMapping("/tree/positionNueva/{x}/{y}")
+    public @ResponseBody ResponseEntity<Object> addNewPosition(
+            @PathVariable ("x") Double x,
+            @PathVariable ("y") Double y
     )throws Exception {
-        Optional<Position> positionOptional =
-                Optional.ofNullable(repoPositionJPA.findByXAndY(newTree.getPosition().getX(), newTree.getPosition().getY()));
-        try {
-            if (!positionOptional.isPresent()) {
-                repoTreeJPA.save(newTree);
-
-                Tree newTreeOptional = new Tree(newTree.getProduce(), newTree.getPosition());
-                repoTreeJPA.save(newTreeOptional);
-                return ResponseEntity.ok(newTreeOptional.getId());
-
+        Optional <Position> positionOptional = repoPositionJPA.findByX(x);
+        if (positionOptional.isPresent()) {
+            if (positionOptional.get().getY()==y) {
+                return ResponseEntity.ok("ya hay un tree en esa position");
             }
-            Exception e= new PositionException("ya hay un tree en esa position", newTree.getPosition());
-            return ResponseEntity.badRequest().body(e.getMessage());
         }
-        catch (Exception e) {
-            return ResponseEntity.badRequest().body(e.getMessage());
-        }
+            Position positionNueva = new Position(x, y);
+            repoPositionJPA.save(positionNueva);
+            return ResponseEntity.ok(positionNueva.getId());
     }
+
+    @PostMapping("/tree/nuevo/{x}/{y}/{produce}")
+    public @ResponseBody ResponseEntity<Object> addNewTree(
+            @PathVariable ("x") Double x,
+            @PathVariable ("y") Double y,
+            @PathVariable ("produce") String produce
+    )throws Exception {
+        Optional <Position> positionOptional = repoPositionJPA.findByX(x);
+        if (positionOptional.isPresent()) {
+            if (positionOptional.get().getY()==y) {
+                return ResponseEntity.ok("ya hay un tree en esa position");
+            }
+        }
+        Position positionNueva = new Position(x, y);
+        Tree treeNuevo = new Tree(produce, positionNueva);
+        repoTreeJPA.save(treeNuevo);
+        repoPositionJPA.save(positionNueva);
+        return ResponseEntity.ok(treeNuevo.getId());
+    }
+
 }

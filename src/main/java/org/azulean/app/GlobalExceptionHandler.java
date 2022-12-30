@@ -9,10 +9,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(PositionException.class)
+    @ExceptionHandler(value = PositionException.class)
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    String positionRepeated(PositionException ex){
+     String positionRepeated(PositionException ex){
         return ex.getLocalizedMessage();
     }
+
 }

@@ -18,4 +18,5 @@ public interface RepoTreeJPA extends JpaRepository<Tree, Long> {
     void delete(Tree id);
 
     Page<Tree> findById(Long idTree, Pageable page);
+    Page<Tree> findByProduce(String produce, Pageable page);
 }
